@@ -16,8 +16,7 @@ export const HomeScreen = () => {
     const [hasOptions, setHasOptions] = React.useState(true);
     const [selected, setSelected] = React.useState(0);
     const options = [
-        { id: "1", title: "this" },
-        { id: "2", title: "is" },
+        { id: "1", title: "work" },
         { id: "3", title: "in" },
         { id: "4", title: "progress" },
     ];
