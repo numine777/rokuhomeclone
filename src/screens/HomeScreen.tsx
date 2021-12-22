@@ -29,6 +29,10 @@ export const HomeScreen = () => {
             {name: "Hulu", image: hulu},
             {name: "Discovery+", image: discoveryPlus},
             {name: "Roku Channel", image: rokuChannel},
+            {name: "Netflix", image: netflix},
+            {name: "Disney+", image: disneyPlus},
+            {name: "AppleTV", image: appleTv},
+            {name: "Hulu", image: hulu},
         ],
     ];
     return (

@@ -1,0 +1,8 @@
+.fading-grid {
+    overflow: scroll;
+    height: 65vh;
+    display: block;
+}
+.fading-grid::-webkit-scrollbar {
+    display: none;
+}

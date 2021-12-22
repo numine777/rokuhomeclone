@@ -1,9 +1,12 @@
 import React from "react";
+import { FadeInSection } from "./FadeInSection";
 import { Pannel, RokuPannel } from "./RokuPannel";
+import "../styles/DisplayGrid.css";
 
 type Props = {
     panels: Pannel[];
 };
+
 export const DisplayGrid: React.FC<Props> = ({ panels }) => {
     return (
         <div
@@ -12,6 +15,7 @@ export const DisplayGrid: React.FC<Props> = ({ panels }) => {
                 flexDirection: "column",
                 width: "60%",
                 alignItems: "flex-end",
+                height: "100%",
             }}
         >
             <div
@@ -23,10 +27,12 @@ export const DisplayGrid: React.FC<Props> = ({ panels }) => {
             >
                 <p>{panels.length} Items</p>
             </div>
-            <div style={{ flexFlow: "wrap row" }}>
-                {panels.map((pannel) => (
-                    <RokuPannel pannel={pannel} />
-                ))}
+            <div className="fading-grid">
+                <FadeInSection>
+                    {panels.map((pannel) => (
+                        <RokuPannel pannel={pannel} />
+                    ))}
+                </FadeInSection>
             </div>
         </div>
     );
