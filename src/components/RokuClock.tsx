@@ -23,7 +23,7 @@ export const RokuClock = (props: {}) => {
             style={{
                 display: "inline-flex",
                 color: "#ffffff",
-                fontSize: 32,
+                fontSize: 36,
                 width: "10vw",
                 justifyContent: "center",
             }}

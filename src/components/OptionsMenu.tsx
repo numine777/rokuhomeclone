@@ -30,6 +30,7 @@ export const OptionsMenu: React.FC<Props> = ({ options, optionsEnabled }) => {
                     position: "relative",
                     alignItems: "center",
                     justifyContent: "space-between",
+                    fontWeight: "normal",
                 }}
                 enabled={optionsEnabled}
             />
