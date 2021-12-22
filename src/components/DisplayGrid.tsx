@@ -4,10 +4,18 @@ import { Pannel, RokuPannel } from "./RokuPannel";
 import "../styles/DisplayGrid.css";
 
 type Props = {
-    panels: Pannel[];
+    pannels: Pannel[];
 };
 
-export const DisplayGrid: React.FC<Props> = ({ panels }) => {
+export const DisplayGrid: React.FC<Props> = ({ pannels }) => {
+    const rows = [];
+    let i = 3;
+    do {
+        let row = pannels.slice(i - 3, i);
+        rows.push(row);
+        i +=3;
+    } while (i < pannels.length + 3);
+
     return (
         <div
             style={{
@@ -25,14 +33,16 @@ export const DisplayGrid: React.FC<Props> = ({ panels }) => {
                     marginRight: 50,
                 }}
             >
-                <p>{panels.length} Items</p>
+                <p>{pannels.length} Items</p>
             </div>
             <div className="fading-grid">
-                <FadeInSection>
-                    {panels.map((pannel) => (
-                        <RokuPannel pannel={pannel} />
-                    ))}
-                </FadeInSection>
+                {rows.map((row) =>
+                    <FadeInSection>
+                        {row.map((pannel) => (
+                            <RokuPannel pannel={pannel} />
+                        ))}
+                    </FadeInSection>
+                )}
             </div>
         </div>
     );

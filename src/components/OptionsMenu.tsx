@@ -45,6 +45,7 @@ export const OptionsMenu: React.FC<Props> = ({ options, optionsEnabled }) => {
                             title={item.title}
                             style={{
                                 display: "inline-block",
+                                textAlign: "right",
                             }}
                             enabled={true}
                         />

@@ -8,7 +8,7 @@ export const RokuClock = (props: {}) => {
         setInterval(() => {
             const newTime = new Date();
             setTime(newTime);
-        }, 6000);
+        }, 1000);
     }, []);
 
     React.useEffect(() => {

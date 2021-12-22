@@ -13,7 +13,7 @@ import rokuChannel from "../img/rokuchannel.png";
 type Props = {};
 
 export const HomeScreen = () => {
-    const [hasOptions, setHasOptions] = React.useState(false);
+    const [hasOptions, setHasOptions] = React.useState(true);
     const [selected, setSelected] = React.useState(0);
     const options = [
         { id: "1", title: "this" },
@@ -57,7 +57,7 @@ export const HomeScreen = () => {
             />
             <div style={{ display: "inline-flex", padding: 50, width: "100%" }}>
                 <SelectorList selector={setSelected} selected={selected} />
-                <DisplayGrid panels={grids[0]} />
+                <DisplayGrid pannels={grids[0]} />
             </div>
         </div>
     );

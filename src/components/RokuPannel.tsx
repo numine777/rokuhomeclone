@@ -24,6 +24,7 @@ export const RokuPannel: React.FC<Props> = ({ pannel }) => {
                 style={{
                     width: 350,
                     height: 250,
+                    margin: 10,
                     objectFit: "cover",
                     objectPosition: "50% 10%",
                 }}
